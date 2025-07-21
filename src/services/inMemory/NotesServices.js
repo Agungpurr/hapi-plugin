@@ -50,14 +50,14 @@ class NotesService {
       throw new NotFoundError("Gagal memperbarui catatan. Id tidak ditemukan");
     }
 
-    const updateAt = new Date().toISOString();
+    const updatedAt = new Date().toISOString();
 
     this._notes[index] = {
       ...this._notes[index],
       title,
       tags,
       body,
-      updateAt,
+      updatedAt,
     };
   }
 
